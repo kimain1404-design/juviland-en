@@ -73,7 +73,7 @@ img { display: block; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: calc(40 * var(--u));
+  gap: calc(60 * var(--u));
   width: 100%;
   padding: 0 24px;
 }
@@ -81,7 +81,7 @@ img { display: block; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: calc(4 * var(--u));
+  gap: calc(10 * var(--u));
   text-align: center;
 }
 .hero__title {
@@ -89,14 +89,17 @@ img { display: block; }
   font-family: "Wonju", "Pretendard", sans-serif;
   font-weight: 700;
   font-size: calc(80 * var(--u));
-  line-height: 1.2;
+  line-height: 1;
   word-break: keep-all;
+  display: flex;            /* 줄 사이 음수 margin이 겹쳐 사라지지 않도록 */
+  flex-direction: column;
+  align-items: center;
 }
 .line {
   display: block;
   overflow: hidden;
-  padding-bottom: .08em;   /* 받침 잘림 방지 */
-  margin-bottom: -.08em;
+  padding: .1em 0 .2em;    /* line-height 1에서 g·p 꼬리 잘림 방지 (높이에는 영향 없음) */
+  margin: -.1em 0 -.2em;
 }
 .line__inner { display: inline-block; white-space: nowrap; }
 
@@ -149,7 +152,7 @@ img { display: block; }
   flex-shrink: 0;
   width: calc(1600 * var(--u));
   height: calc(360 * var(--u));
-  margin-top: calc(-44 * var(--u));
+  margin-top: calc(-37.6 * var(--u));   /* 일러스트 상단 = 시안 y 382 */
 }
 .hero__people {
   position: absolute;
@@ -212,8 +215,8 @@ img { display: block; }
    ========================================================= */
 @media (max-width: 1199px) {
   .hero          { padding-top: 56px; }
-  .hero__box     { gap: 32px; }
-  .hero__content { gap: 4px; }
+  .hero__box     { gap: 40px; }
+  .hero__content { gap: 10px; }
   .hero__title   { font-size: 5.4vw; }
   .hero__desc    { font-size: 16px; }
   .hero__cta     { gap: 12px; }
@@ -232,8 +235,8 @@ img { display: block; }
   .mo-only { display: inline; }
 
   .hero          { padding-top: calc(100 * var(--m)); }
-  .hero__box     { gap: calc(34 * var(--m)); padding: 0 calc(60 * var(--m)); }
-  .hero__content { gap: 0; }
+  .hero__box     { gap: calc(60 * var(--m)); padding: 0 calc(60 * var(--m)); }
+  .hero__content { gap: calc(20 * var(--m)); }
   .hero__title   { font-size: calc(100 * var(--m)); }
   .hero__desc    { font-size: calc(34 * var(--m)); }
 
@@ -255,7 +258,7 @@ img { display: block; }
     flex-shrink: 0;
     left: calc(6 * var(--m));
     width: calc(996 * var(--m));
-    margin-top: calc(52 * var(--m));   /* 하단을 섹션 끝에 맞춤 */
+    margin-top: calc(45.47 * var(--m));   /* 하단을 섹션 끝(1080)에 맞춤 */
   }
   .hero__stage-mo img { width: 100%; height: auto; aspect-ratio: 694 / 288; }
 }
@@ -263,7 +266,7 @@ img { display: block; }
 /* ---------- 제목이 화면보다 넓을 때 (원주체 대신 더 넓은 대체 서체가 쓰인 경우) ----------
    main-section01.js가 넘침을 감지해 --fit(0~1)을 넣음. 줄 높이는 그대로라 섹션 높이는 변하지 않음 */
 .hero__title.is-fit .line__inner { font-size: calc(1em * var(--fit, 1)); }
-.hero__title.is-fit .line { line-height: 1.2; }
+.hero__title.is-fit .line { line-height: 1; }
 
 /* ---------- iframe으로 삽입됐을 때 (라이브클래스 등) ---------- */
 html.is-embed, html.is-embed body { overflow: hidden; background: var(--background-canvas); }
