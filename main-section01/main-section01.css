@@ -136,7 +136,8 @@ img { display: block; }
 }
 .btn--primary   { background: var(--brand-primary); color: var(--text-inverse);
                   width: auto; min-width: calc(150 * var(--u)); padding: 0 calc(24 * var(--u)); }   /* EN : 문구 길이에 맞춤 (시안 154) */
-.btn--secondary { background: var(--background-surface); color: var(--text-brand); }
+.btn--secondary { background: var(--background-surface); color: var(--text-brand);
+                  width: auto; min-width: calc(150 * var(--u)); padding: 0 calc(24 * var(--u)); }   /* EN : 두 버튼 모두 문구 길이에 맞춤 */
 .btn:hover  { translate: 0 -2px; box-shadow: 0 3px 0 var(--stroke-strong); }
 .btn:active { translate: 0 0; box-shadow: none; }
 .btn--primary:hover { background: var(--brand-primary-hover); }
@@ -218,7 +219,7 @@ img { display: block; }
   .hero__desc    { font-size: 16px; }
   .hero__cta     { gap: 12px; }
   .btn           { width: 140px; height: 48px; font-size: 15px; border-radius: 8px; }
-  .btn--primary  { width: auto; min-width: 140px; padding: 0 20px; }
+  .btn--primary, .btn--secondary { width: auto; min-width: 140px; padding: 0 20px; }
   .hero__stage   { margin-top: 20px; }   /* 곡선이 버튼과 겹치지 않도록 */
 }
 
@@ -244,7 +245,7 @@ img { display: block; }
     font-size: calc(26 * var(--m));
     border-radius: max(4px, calc(8 * var(--m)));
   }
-  .btn--primary { width: auto; min-width: 0; padding: 0 calc(34 * var(--m)); }   /* EN 시안 : 좌우 34 */
+  .btn--primary, .btn--secondary { width: auto; min-width: 0; padding: 0 calc(34 * var(--m)); }   /* EN 시안 : 좌우 34 */
   /* 보이는 크기는 시안대로, 누르는 영역만 위아래로 확장 */
   .btn::after { content: ""; position: absolute; inset: -8px 0; }
 

@@ -26,8 +26,8 @@ main-section01/
 
 | 버튼 | 주소 |
 |---|---|
-| Partner with us | https://zuviland-en.liveklass.com/forms/RSUzZaSeN9XWVYJSatbT |
-| Contact us | https://zuviland-en.liveklass.com/forms/mb87rtMVzQvM6uarZXrT |
+| Government Inquiries (기관 폼) | https://zuviland-en.liveklass.com/forms/RSUzZaSeN9XWVYJSatbT |
+| Investment Partnership (투자 폼) | https://zuviland-en.liveklass.com/forms/mb87rtMVzQvM6uarZXrT |
 
 ## 제목 서체
 
